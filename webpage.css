@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: comic sans ms;
+}
+body{
+    overflow: hidden;
+    display: flex;
+}
+.video{
+    position: absolute;
+    z-index: -1;
+    opacity: 0.8;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+.main-container{
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    width: 600px;
+    margin: 20px auto;
+    text-align: left;
+    transition: 1s;
+}
+.container h1{
+    font-weight: 100;
+    color: rgba(0, 153, 204, 1);
+    padding-bottom: 30px;
+    border-bottom: 2px solid rgba(0, 153, 204, 0.2);
+}
+.inside-container{
+    margin: 20px auto;
+    text-align: center;
+    background: rgba(0, 153, 204, 0.3);
+    border-radius: 3px;
+    padding: 20px;
+    box-shadow: 0px 1px 5px 1px #0099cc;   
+}
+
+.inside-container h2{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 200;
+}
+.inside-container label{
+    display: block;
+    color: #333;
+    font-weight: 600;
+    padding: 10px;
+}
+.inside-container input{
+    width: 500px;
+    border: none;
+    outline: none;
+    height: 25px;
+    padding-left: 10px;
+    border-radius: 3px;
+}
+.inside-container input:focus{
+    box-shadow: 0px 1px 8px 2px #0099cc;   
+}
+.inside-container .danger{
+    animation: danger 0.5s infinite linear;
+}
+@keyframes danger{
+    
+    0%{
+        box-shadow: 0px 1px 10px 2px #fa8072;
+    }
+    50%{
+        box-shadow: 0px 1px 5px 1px #fa8072;
+    }
+    100%{
+        box-shadow: 0px 1px 10px 2px #fa8072;
+    }
+    
+}
+.inside-container button{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    background: rgba(0, 153, 204, 1);
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.container p{
+    color: #333;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 2px solid rgba(0, 153, 204, 0.2);
+}
+.added-bookmarkers{
+    position: absolute;
+    left: 1200px;
+    width: 400px;
+    height: 100vh;
+    margin: 0px 10px;
+    background: rgba(0, 153, 204, 0.3);
+    border-radius: 3px;
+    overflow: hidden;
+    transition: 0.5s;
+    box-shadow: -1px 0px 5px 0px #0099cc;
+}
+.added-bookmarkers:hover + .container{
+    transform: translateX(-200px);
+}
+.added-bookmarkers:hover{
+    left: 900px;
+}
+.added-bookmarkers span{
+    width: 50px;
+    display: flex;
+    flex-flow: column;
+    min-height: 2px;
+    margin: 15px 15px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 0px #fff;
+}
+.added-bookmarkers span:nth-child(3){
+    margin-bottom: 50px;
+}
+.added-bookmarkers .info{
+    display: none;
+    width: 300px;
+    align-items: center;
+    background: rgba(0, 153, 204, 0.5);
+    margin: 15px;
+    padding: 10px 5px;
+    border-radius: 10px;
+    margin-left: 25px;
+    box-shadow: 0px 1px 5px 2px #0099cc;
+
+
+}
+.added-bookmarkers:hover .info{
+    display: flex;
+    justify-content: space-between;
+}
+.added-bookmarkers .info:hover{
+    box-shadow: 0px 1px 5px 1px grey;
+
+}
+.added-bookmarkers .info h4{
+    text-transform: capitalize;
+    font-weight: 400;
+    color: #fff;
+    margin-left: 10px;
+}
+.added-bookmarkers .info a{
+    text-decoration: none;
+    color: #fff;
+    background: rgba(0, 153, 204, 0.5);
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 3px;
+    box-shadow: 0px 1px 1px 1px #0099cc;
+}
+.added-bookmarkers .info a:hover{
+    box-shadow: 0px 1px 5px 1px #0099cc;
+}
+.added-bookmarkers .info button{
+    padding: 6px 10px;
+    background: salmon;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+}
+.added-bookmarkers .info button:hover{
+    box-shadow: 0px 1px 5px 1px salmon;
+}
